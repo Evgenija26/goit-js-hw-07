@@ -20,15 +20,15 @@ galleryRef.addEventListener("click", (e) => {
     return;
   }
   const instance = basicLightbox.create(
-    `<img src="${e.target.getAttribute("data-source")}">`
+    `<img src="${e.target.getAttribute("data-source")}" width="800" height="600">`
   );
-  instance.show(onEscClose);
-  function onEscClose() {
+    
+  instance.show();
+
     galleryRef.addEventListener("keydown", (e) => {
       if (e.key === "Escape") {
         instance.close();
       }
     });
-  }
 });
-console.log(galleryItems);
+console.log(galleryItems); 
